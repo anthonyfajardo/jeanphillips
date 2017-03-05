@@ -11,7 +11,7 @@ $(function(){
 	var buttonHeight = $(".toggleButton").height();
 
 	if($(window).width()< 768){
-		$(".navigation").css("top", buttonHeight * 3);
+		$(".navigation").css("top", buttonHeight * 2);
 	} 
 
 
