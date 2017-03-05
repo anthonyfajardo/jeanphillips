@@ -1,0 +1,424 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+html{font-size: 14px;}
+body{
+	font-family: 'EB Garamond', serif; 
+	color: rgb(230,230,230);
+	hyphens: none;
+}
+h1{font-family: 'Rouge Script', cursive ;}
+h2{font-family: 'EB Garamond', serif;}
+
+
+/********************************
+OFF-CANVAS NAVIGATION
+********************************/
+
+.container{
+	position: relative;
+}
+.active{
+	right: 0;
+}
+.navigation{
+	position: fixed;
+	top: 10%;
+	right:0;
+	transition: 0.5s ease-in-out;
+	z-index: 10;
+
+}
+
+.navigation ul{padding-left: 0;}
+.navigation ul li{
+	list-style: none;
+	margin: 10px 0;
+	
+}
+.navigation li a{
+	padding: 5px;
+	/*color: rgb(204,204,204);*/
+	color: #cccccc;
+	text-decoration: none;
+	transition: 0.5s ease-in;
+}
+
+.navigation li a:hover{
+	color: #752721;
+	font-size: 1.5em;
+}
+
+.toggleButton{
+	position: fixed;
+	top: 25px;
+	right: 0;
+	z-index: 1;
+	font-size: 2em;
+	color: #000;
+}
+
+
+@media screen and (max-width: 767px){
+	.active{right: -50%;}
+	.navigation {background: rgba(0,0,0,0.7);}	
+}
+
+/*****************************************/
+
+.jumbotron{padding: 0;margin: 0;width: 100%;}
+
+
+.landingPage{
+	height: 100vh;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+
+	position: relative;
+	background: rgba(0,0,0,0.6);
+
+}
+
+.landingPage:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/bgLandingPageXsmall.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.landingPage h1{
+	font-size: 4em;
+	transform: rotate(-15deg);
+	
+}
+
+.landingPage h2 small{
+	letter-spacing: 0.35em;
+	color: #cccccc;
+}
+
+.landingPage h2{
+	margin-bottom: 2em;
+}
+
+
+.headerTitle{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-bottom: 3em;
+}
+
+.headerTitle a{
+	text-decoration: none;	
+	color: #ffffff;
+}
+
+.getInTouch a{
+	text-decoration: none;
+	color: rgb(230,230,230);
+	padding: 15px;
+	border: 2px solid rgb(230,230,230);
+	border-radius:25px;
+	transition: 0.5s ease-in;
+}
+
+.getInTouch a:hover{
+	background: #752721;
+	font-size: 1.5em;
+}
+
+/******************************
+About Section
+******************************/
+.aboutWrapper{
+	position: relative;
+	background: rgba(0,0,0,0.6);
+	padding-bottom: 25px;
+}
+.aboutWrapper::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/bgLandingPageXsmall.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+
+.header h1{
+	font-size: 3em;
+	margin-bottom: 0;
+	letter-spacing: 2px;
+}
+.header h2{
+	letter-spacing: 2px;
+	font-size: 1em;
+}
+.header h2{margin: 0;}
+.aboutImg{margin-bottom: 1em;}
+.aboutContent h2{
+	text-align: center;
+	margin-bottom: 1em;
+}
+.fullHeight{
+	height: 100vh;
+}
+
+.aboutContentWrapper,
+.eventsSection{margin: 5em 0;}
+
+/*********************************************
+EVENTS SECTION
+*********************************************/
+.eventsTxt h2{text-decoration: underline;}
+.eventsTxt h4{margin: 2em 0;}
+.eventItems{margin-bottom: 3em;}
+
+
+.eventWrapper{
+	position: relative;
+	background: rgba(0,0,0,0.5);
+	padding-bottom: 25px;
+}
+.eventWrapper::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/bgEventsMobile.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+
+
+/*********************************************
+GALLERY
+*********************************************/
+
+.galleryImages .thumbnail{margin-bottom: 0;}
+.galleryImages .imgTitle{margin-bottom: 0;}
+.galleryImages .imgPrice{margin-bottom: 25px;}
+.modal-dialog {width:90%;margin: 0 auto;}
+.thumbnail {margin-bottom:6px;}
+.modal.fade.in {top: 20%;}
+
+.galleryItem p{
+	text-align: center; 
+	margin: 0;
+	display: none; 
+	color: #fff; 
+	background: rgba(0,0,0,0.7);
+}
+.galleryItem{margin-bottom: 2em;}
+.itemWrapper{overflow: hidden;}
+.galleryItem img{transition: transform 0.3s ease-in;}
+.galleryItem img:hover{transform: scale(1.2);}
+.galleryWrapper .galleryImages{padding: 2em 0 6em 0;}
+
+.galleryWrapper{
+	position: relative;
+	background: rgba(0,0,0,0.5);
+	padding-bottom: 2em;
+}
+
+.galleryWrapper::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/bgGalleryMobile.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.modal>*{color: #333333;}
+.modal-body img{margin: 0 auto;}
+
+
+/*********************************************
+CONTACTS SECTION
+*********************************************/
+
+form{margin-top: 2em;}
+.contactWrapper{
+	position: relative;
+	background: rgba(0,0,0,0.6);
+	padding-bottom: 5em;
+}
+.contactWrapper::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/bgContact3bMobile.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.form-control{margin-bottom: 1em;}
+#submit{
+	background: #752721;
+	color: #fff;
+}
+
+p.email, p.phone{margin: 0;}
+p.email{margin-top: 2em;}
+p.email a{text-decoration: none; color: #cccccc; transition: color 0.5s ease-in;}
+p.email a:hover{color: blue;}
+.contactContainer{padding-bottom: 20em;}
+
+
+
+/*********************************************
+FOOTER
+*********************************************/
+
+footer{
+	background: #1A1A1A;
+	padding: 1em 0;
+
+}
+footer p{
+	margin: 0;
+	font-size: 0.75em;
+	letter-spacing: 3px;
+}
+
+.footerRight{text-align: center;}
+.footerLeft{text-align: center;}
+
+
+/*********************************************
+MEDIA QUERIES
+*********************************************/
+
+@media screen and (min-width: 537px){
+	.aboutContent{line-height: 1.65em;}
+	.landingPage h1{font-size: 7em;}
+	.eventsTxt p,
+	.eventsImg{text-align: center;}
+	#submit{width: 35%;height: 40px;}
+	.navigation{padding-left: 3em;}
+	.galleryItem p{display: block;}
+}
+@media screen and (min-width: 768px){
+
+	.landingPage h1{ font-size: 10em;}
+
+	.landingPage:after, 
+	.aboutWrapper:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background: url(../images/bgLandingPage.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+	.eventWrapper::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background: url(../images/bgEvents.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+
+	.contactWrapper::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background: url(../images/bgContact3b.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+	
+	.galleryWrapper::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background: url(../images/bgGalleryMobile.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+
+
+	.modal-body img{width: 25%;}
+
+
+	.eventsTxt p,
+	.eventsImg{text-align: left;}
+	.footerRight{text-align: right;}
+	.footerLeft{text-align: left;}
+	.contactContainer{padding-top: 6em;}
+
+@media screen and (min-width: 992px){
+ *{font-size: 18px;}
+}
+@media screen and (min-width: 1200px){}
+
+
+
